@@ -1,0 +1,251 @@
+[INFO] [FMI CALL] FMU for co-simulation instantiated: name='instance1', resourceLocation='/mnt/c/Users/salle/Documents/UIO/Masters-material/FMI/Test_FMU_py/unzip_dir/resources/'
+[INFO] [FMI CALL] FMU for co-simulation: Entering initialization mode: startTime=0.000000, stopTime=1.000000
+[INFO] [RTLOLA] Created RTLola monitor instance with spec: bouncing_ball_spec.lola
+
+[INFO] [RTLOLA] Setting initial RTLola specification...
+
+[INFO] [RTLOLA] Parsed new RTLola specification 
+[INFO] [RTLOLA] Starting RTLola monitor...
+
+[INFO] [FMI CALL] Exiting initialization mode
+[INFO] [FMI CALL] Do Step: t=0.100, stepsize=0.100
+[INFO] [RTLOLA] RTLola Evaluation process result: 
+[0.001976s] Processing new event
+[0.001976s] [Input] [h] = 0.951441
+[0.001976s] [Output][height_above_ground] [Value] =  true
+[0.001976s] [Trigger] [#0] = Ball in motion
+[0.001976s] [Trigger] [#2] = Ball is currently above ground
+
+[INFO] [RTLOLA] Handling RTLola specification switch...
+
+[INFO] [RTLOLA] Setting new RTLola specification...
+
+[INFO] [RTLOLA] Parsed new RTLola specification 
+[INFO] [RTLOLA] Starting RTLola monitor...
+
+[INFO] [FMI CALL] Do Step: t=0.200, stepsize=0.100
+[INFO] [RTLOLA] RTLola Evaluation process result: 
+[0.001691s] Processing new event
+[0.001691s] [Input] [h] = 0.804781
+[0.001691s] [Input] [v] = -1.962000
+[0.001691s] [Output][is_falling] [Value] =  true
+[0.001691s] [Output][is_rising] [Value] =  false
+[0.001691s] [Output][heighVel] [Value] =  2.766781
+[0.001691s] [Output][height_above_ground] [Value] =  true
+[0.001691s] [Trigger] [#0] = Ball is falling
+
+[INFO] [FMI CALL] Do Step: t=0.300, stepsize=0.100
+[INFO] [RTLOLA] RTLola Evaluation process result: 
+[0.002656s] Processing new event
+[0.002656s] [Input] [h] = 0.560021
+[0.002656s] [Input] [v] = -2.943000
+[0.002656s] [Output][is_falling] [Value] =  true
+[0.002656s] [Output][is_rising] [Value] =  false
+[0.002656s] [Output][heighVel] [Value] =  3.503021
+[0.002656s] [Output][height_above_ground] [Value] =  true
+[0.002656s] [Trigger] [#0] = Ball is falling
+
+[INFO] [FMI CALL] Do Step: t=0.400, stepsize=0.100
+[INFO] [RTLOLA] RTLola Evaluation process result: 
+[0.003820s] Processing new event
+[0.003820s] [Input] [h] = 0.217162
+[0.003820s] [Input] [v] = -3.924000
+[0.003820s] [Output][is_falling] [Value] =  true
+[0.003820s] [Output][is_rising] [Value] =  false
+[0.003820s] [Output][heighVel] [Value] =  4.141162
+[0.003820s] [Output][height_above_ground] [Value] =  true
+[0.003820s] [Trigger] [#0] = Ball is falling
+
+[INFO] [FMI CALL] Do Step: t=0.500, stepsize=0.100
+[INFO] [RTLOLA] RTLola Evaluation process result: 
+[0.004627s] Processing new event
+[0.004627s] [Input] [h] = 0.135601
+[0.004627s] [Input] [v] = 2.649681
+[0.004627s] [Output][is_falling] [Value] =  false
+[0.004627s] [Output][is_rising] [Value] =  true
+[0.004627s] [Output][heighVel] [Value] =  -2.514080
+[0.004627s] [Output][height_above_ground] [Value] =  true
+[0.004627s] [Trigger] [#1] = Ball is rising
+[0.004627s] [Trigger] [#2] = Ball is close to ground
+
+[INFO] [FMI CALL] Do Step: t=0.600, stepsize=0.100
+[INFO] [RTLOLA] RTLola Evaluation process result: 
+[0.005475s] Processing new event
+[0.005475s] [Input] [h] = 0.352009
+[0.005475s] [Input] [v] = 1.668681
+[0.005475s] [Output][is_falling] [Value] =  false
+[0.005475s] [Output][is_rising] [Value] =  true
+[0.005475s] [Output][heighVel] [Value] =  -1.316672
+[0.005475s] [Output][height_above_ground] [Value] =  true
+[0.005475s] [Trigger] [#1] = Ball is rising
+
+[INFO] [FMI CALL] Do Step: t=0.700, stepsize=0.100
+[INFO] [RTLOLA] RTLola Evaluation process result: 
+[0.006765s] Processing new event
+[0.006765s] [Input] [h] = 0.470318
+[0.006765s] [Input] [v] = 0.687681
+[0.006765s] [Output][is_falling] [Value] =  false
+[0.006765s] [Output][is_rising] [Value] =  true
+[0.006765s] [Output][heighVel] [Value] =  -0.217363
+[0.006765s] [Output][height_above_ground] [Value] =  true
+[0.006765s] [Trigger] [#1] = Ball is rising
+
+[INFO] [FMI CALL] Do Step: t=0.800, stepsize=0.100
+[INFO] [RTLOLA] RTLola Evaluation process result: 
+[0.008051s] Processing new event
+[0.008051s] [Input] [h] = 0.490526
+[0.008051s] [Input] [v] = -0.293319
+[0.008051s] [Output][is_falling] [Value] =  true
+[0.008051s] [Output][is_rising] [Value] =  false
+[0.008051s] [Output][heighVel] [Value] =  0.783845
+[0.008051s] [Output][height_above_ground] [Value] =  true
+[0.008051s] [Trigger] [#0] = Ball is falling
+
+[INFO] [FMI CALL] Do Step: t=0.900, stepsize=0.100
+[INFO] [RTLOLA] RTLola Evaluation process result: 
+[0.009933s] Processing new event
+[0.009933s] [Input] [h] = 0.412635
+[0.009933s] [Input] [v] = -1.274319
+[0.009933s] [Output][is_falling] [Value] =  true
+[0.009933s] [Output][is_rising] [Value] =  false
+[0.009933s] [Output][heighVel] [Value] =  1.686954
+[0.009933s] [Output][height_above_ground] [Value] =  true
+[0.009933s] [Trigger] [#0] = Ball is falling
+
+[INFO] [FMI CALL] Do Step: t=1.000, stepsize=0.100
+[INFO] [RTLOLA] RTLola Evaluation process result: 
+[0.011490s] Processing new event
+[0.011490s] [Input] [h] = 0.236644
+[0.011490s] [Input] [v] = -2.255319
+[0.011490s] [Output][is_falling] [Value] =  true
+[0.011490s] [Output][is_rising] [Value] =  false
+[0.011490s] [Output][heighVel] [Value] =  2.491963
+[0.011490s] [Output][height_above_ground] [Value] =  true
+[0.011490s] [Trigger] [#0] = Ball is falling
+
+
+[INFO] [FMI CALL] fmi3Terminate co-simulation
+[INFO] [FMI CALL] FMU for co-simulation instantiated: name='instance1', resourceLocation='/mnt/c/Users/salle/Documents/UIO/Masters-material/FMI/Test_FMU_py/unzip_dir/resources/'
+[INFO] [FMI CALL] FMU for co-simulation: Entering initialization mode: startTime=0.000000, stopTime=1.000000
+[INFO] [RTLOLA] Setting initial RTLola specification...
+
+[INFO] [RTLOLA] Parsed new RTLola specification 
+[INFO] [RTLOLA] Starting RTLola monitor...
+
+[INFO] [FMI CALL] Exiting initialization mode
+[INFO] [FMI CALL] Do Step: t=0.100, stepsize=0.100
+[INFO] [RTLOLA] RTLola Evaluation process result: 
+[0.001056s] Processing new event
+[0.001056s] [36m[Input][0m [36m[h][0m = 0.951441
+[0.001056s] [34m[Output][height_above_ground][0m [32m[Value] = [0m true
+[0.001056s] [31m[Trigger][0m [31m[#0][0m = Ball in motion
+[0.001056s] [31m[Trigger][0m [31m[#2][0m = Ball is currently above ground
+
+[INFO] [RTLOLA] Handling RTLola specification switch...
+
+[INFO] [RTLOLA] Setting new RTLola specification...
+
+[INFO] [RTLOLA] Parsed new RTLola specification 
+[INFO] [RTLOLA] Starting RTLola monitor...
+
+[INFO] [FMI CALL] Do Step: t=0.200, stepsize=0.100
+[INFO] [RTLOLA] RTLola Evaluation process result: 
+[0.000721s] Processing new event
+[0.000721s] [36m[Input][0m [36m[h][0m = 0.804781
+[0.000721s] [36m[Input][0m [36m[v][0m = -1.962000
+[0.000721s] [34m[Output][is_falling][0m [32m[Value] = [0m true
+[0.000721s] [34m[Output][is_rising][0m [32m[Value] = [0m false
+[0.000721s] [34m[Output][heighVel][0m [32m[Value] = [0m 2.766781
+[0.000721s] [34m[Output][height_above_ground][0m [32m[Value] = [0m true
+[0.000721s] [31m[Trigger][0m [31m[#0][0m = Ball is falling
+
+[INFO] [FMI CALL] Do Step: t=0.300, stepsize=0.100
+[INFO] [RTLOLA] RTLola Evaluation process result: 
+[0.001627s] Processing new event
+[0.001627s] [36m[Input][0m [36m[h][0m = 0.560021
+[0.001627s] [36m[Input][0m [36m[v][0m = -2.943000
+[0.001627s] [34m[Output][is_falling][0m [32m[Value] = [0m true
+[0.001627s] [34m[Output][is_rising][0m [32m[Value] = [0m false
+[0.001627s] [34m[Output][heighVel][0m [32m[Value] = [0m 3.503021
+[0.001627s] [34m[Output][height_above_ground][0m [32m[Value] = [0m true
+[0.001627s] [31m[Trigger][0m [31m[#0][0m = Ball is falling
+
+[INFO] [FMI CALL] Do Step: t=0.400, stepsize=0.100
+[INFO] [RTLOLA] RTLola Evaluation process result: 
+[0.002480s] Processing new event
+[0.002480s] [36m[Input][0m [36m[h][0m = 0.217162
+[0.002480s] [36m[Input][0m [36m[v][0m = -3.924000
+[0.002480s] [34m[Output][is_falling][0m [32m[Value] = [0m true
+[0.002480s] [34m[Output][is_rising][0m [32m[Value] = [0m false
+[0.002480s] [34m[Output][heighVel][0m [32m[Value] = [0m 4.141162
+[0.002480s] [34m[Output][height_above_ground][0m [32m[Value] = [0m true
+[0.002480s] [31m[Trigger][0m [31m[#0][0m = Ball is falling
+
+[INFO] [FMI CALL] Do Step: t=0.500, stepsize=0.100
+[INFO] [RTLOLA] RTLola Evaluation process result: 
+[0.003361s] Processing new event
+[0.003361s] [36m[Input][0m [36m[h][0m = 0.135601
+[0.003361s] [36m[Input][0m [36m[v][0m = 2.649681
+[0.003361s] [34m[Output][is_falling][0m [32m[Value] = [0m false
+[0.003361s] [34m[Output][is_rising][0m [32m[Value] = [0m true
+[0.003361s] [34m[Output][heighVel][0m [32m[Value] = [0m -2.514080
+[0.003361s] [34m[Output][height_above_ground][0m [32m[Value] = [0m true
+[0.003361s] [31m[Trigger][0m [31m[#1][0m = Ball is rising
+[0.003361s] [31m[Trigger][0m [31m[#2][0m = Ball is close to ground
+
+[INFO] [FMI CALL] Do Step: t=0.600, stepsize=0.100
+[INFO] [RTLOLA] RTLola Evaluation process result: 
+[0.004122s] Processing new event
+[0.004122s] [36m[Input][0m [36m[h][0m = 0.352009
+[0.004122s] [36m[Input][0m [36m[v][0m = 1.668681
+[0.004122s] [34m[Output][is_falling][0m [32m[Value] = [0m false
+[0.004122s] [34m[Output][is_rising][0m [32m[Value] = [0m true
+[0.004122s] [34m[Output][heighVel][0m [32m[Value] = [0m -1.316672
+[0.004122s] [34m[Output][height_above_ground][0m [32m[Value] = [0m true
+[0.004122s] [31m[Trigger][0m [31m[#1][0m = Ball is rising
+
+[INFO] [FMI CALL] Do Step: t=0.700, stepsize=0.100
+[INFO] [RTLOLA] RTLola Evaluation process result: 
+[0.004909s] Processing new event
+[0.004909s] [36m[Input][0m [36m[h][0m = 0.470318
+[0.004909s] [36m[Input][0m [36m[v][0m = 0.687681
+[0.004909s] [34m[Output][is_falling][0m [32m[Value] = [0m false
+[0.004909s] [34m[Output][is_rising][0m [32m[Value] = [0m true
+[0.004909s] [34m[Output][heighVel][0m [32m[Value] = [0m -0.217363
+[0.004909s] [34m[Output][height_above_ground][0m [32m[Value] = [0m true
+[0.004909s] [31m[Trigger][0m [31m[#1][0m = Ball is rising
+
+[INFO] [FMI CALL] Do Step: t=0.800, stepsize=0.100
+[INFO] [RTLOLA] RTLola Evaluation process result: 
+[0.005570s] Processing new event
+[0.005570s] [36m[Input][0m [36m[h][0m = 0.490526
+[0.005570s] [36m[Input][0m [36m[v][0m = -0.293319
+[0.005570s] [34m[Output][is_falling][0m [32m[Value] = [0m true
+[0.005570s] [34m[Output][is_rising][0m [32m[Value] = [0m false
+[0.005570s] [34m[Output][heighVel][0m [32m[Value] = [0m 0.783845
+[0.005570s] [34m[Output][height_above_ground][0m [32m[Value] = [0m true
+[0.005570s] [31m[Trigger][0m [31m[#0][0m = Ball is falling
+
+[INFO] [FMI CALL] Do Step: t=0.900, stepsize=0.100
+[INFO] [RTLOLA] RTLola Evaluation process result: 
+[0.006275s] Processing new event
+[0.006275s] [36m[Input][0m [36m[h][0m = 0.412635
+[0.006275s] [36m[Input][0m [36m[v][0m = -1.274319
+[0.006275s] [34m[Output][is_falling][0m [32m[Value] = [0m true
+[0.006275s] [34m[Output][is_rising][0m [32m[Value] = [0m false
+[0.006275s] [34m[Output][heighVel][0m [32m[Value] = [0m 1.686954
+[0.006275s] [34m[Output][height_above_ground][0m [32m[Value] = [0m true
+[0.006275s] [31m[Trigger][0m [31m[#0][0m = Ball is falling
+
+[INFO] [FMI CALL] Do Step: t=1.000, stepsize=0.100
+[INFO] [RTLOLA] RTLola Evaluation process result: 
+[0.006917s] Processing new event
+[0.006917s] [36m[Input][0m [36m[h][0m = 0.236644
+[0.006917s] [36m[Input][0m [36m[v][0m = -2.255319
+[0.006917s] [34m[Output][is_falling][0m [32m[Value] = [0m true
+[0.006917s] [34m[Output][is_rising][0m [32m[Value] = [0m false
+[0.006917s] [34m[Output][heighVel][0m [32m[Value] = [0m 2.491963
+[0.006917s] [34m[Output][height_above_ground][0m [32m[Value] = [0m true
+[0.006917s] [31m[Trigger][0m [31m[#0][0m = Ball is falling
+
+[INFO] [FMI CALL] fmi3Terminate co-simulation

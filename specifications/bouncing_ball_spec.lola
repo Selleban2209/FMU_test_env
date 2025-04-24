@@ -1,0 +1,14 @@
+input h: Float64
+
+output height_above_ground := h > 0.0
+trigger height_above_ground 
+    "Ball in motion"
+trigger h = 0.0
+    "Ball hit ground"
+trigger h > 0.0
+    "Ball is currently above ground"
+trigger h < 0.2
+    "Ball close to ground"
+
+
+//Implement frequency

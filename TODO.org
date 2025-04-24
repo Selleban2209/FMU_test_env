@@ -1,0 +1,44 @@
+* LONG TERM GOALS 
+
+** Potential long term goals for Programming 
+
+*** FMU Centralized solution -> a FMU with RTLola baked in 
+
+**** Refactoring/bug fixes
+- [] Make sure all functions follow header definitons
+- [X] Send_data dosent follow header function
+- [] Error handling
+- [X] TEst case, what if specification expects Float64 and we send Int32
+- [] Build another FMU with RTLola support
+- [] Make sure all functions are commented
+- [X] Bugs after specification switch
+- [] Possibilitiy to choose to run RTLola based on arguments 
+- [X] Figure whats causing major overhead in execution
+- [] Test it out in openmodelica/simulink
+- [] Convert solution to Windows 
+
+
+
+**** High priority
+- [] Synchronization between FMU and RTLola
+- [X] Faclitate back and forth communication between FMU and RTLola
+- [X] Improve on Current working centralized solution 
+- [] clean up code, follow header files, modolarize code   
+- [] Logging of results from RTLola and FMU
+- [] Try the built FMUs in another program (e.g. OpenModelica/SMOL )
+- [] Make seperate project from the refrence implementation 
+- [] RTLola triggers activate set variables callback functions in FMU
+- [] Connect multiple FMUs to RTLola
+
+
+**** Low priority
+- [X]  Change value refrences list when switching between specifications (e.g spec_1 requires time,height input and spec_2 requires time,height,speed)
+- [X] Compile RTLola-cli alongside FMU
+- [X] Set variables in FMU from RTLola
+- [X] Basic switching fo specifications during runtime
+
+*** FMU Decentralized solution -> a FMU that only holds RTLola functionalities
+- [] Create an FMU that is JUST the RTLola functionalities
+- [] Create a FMU that is JUST the RTLola functionalities and can be connected to other FMUs
+- [] Idea being the variables you want to monitor from other FMUs is simply set when 	instantiate the RTLola FMU 
+
