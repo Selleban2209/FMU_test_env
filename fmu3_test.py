@@ -33,7 +33,7 @@ def custom_logger(instance_environment ,status, category, message):
         message = message.decode('utf-8')
     
     # Remove ANSI escape sequences
-   # clean_message = ansi_escape.sub('', message)
+    #clean_message = ansi_escape.sub('', message)
     level_mapping = {
         'OK': logging.INFO,
         'Warning': logging.WARNING,
