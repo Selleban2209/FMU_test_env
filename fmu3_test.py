@@ -45,6 +45,42 @@ def custom_logger(instance_environment ,status, category, message):
     
     logger.log(log_level, f"[{category}] {message}")
 
+
+
+
+def process_triggers(evaluation_output):
+    """
+    Parses the RTLola evaluation output to detect and act upon trigger messages.
+
+    Parameters:
+        evaluation_output (str): The output string from the FMU containing trigger information.
+    """
+    # Decode bytes to string if necessary
+    if isinstance(evaluation_output, bytes):
+        evaluation_output = evaluation_output.decode('utf-8')
+
+    # Split the output into lines
+    lines = evaluation_output.splitlines()
+
+    # Define a pattern to match trigger lines
+    trigger_pattern = re.compile(r'\[Trigger\]\s+\[#(\d+)\]\s+=\s+(.*)')
+
+    # Iterate through lines to find triggers
+    for line in lines:
+        match = trigger_pattern.search(line)
+        if match:
+            trigger_id = match.group(1)
+            trigger_message = match.group(2).strip()
+
+            # Example: Act on specific trigger messages
+            if trigger_message == "Ball in motion":
+                print(f"Trigger #{trigger_id}: {trigger_message}")
+                # Add your custom action here
+            elif trigger_message == "Ball is currently above ground":
+                print(f"Trigger #{trigger_id}: {trigger_message}")
+                # Add your custom action here
+            # Add more conditions as needed
+
 def setup_fmu3_slave(fmu_path, unzip_directory="unzip_dir"):
     """
     Set up and initialize an FMU using fmpy for FMI 3.0 (FMU3Slave).
@@ -105,6 +141,7 @@ def setup_fmu3_slave(fmu_path, unzip_directory="unzip_dir"):
         #print("Current height:", h_value)
         
         raw = fmu3_slave.getString([vrs["rtlola_output"]])[0]
+
         #print("Raw output:", raw)
         if not flip:
             #fmu3_slave.setFloat64([vrs['h']], [10])
