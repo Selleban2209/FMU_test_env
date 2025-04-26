@@ -33,7 +33,7 @@ def custom_logger(instance_environment ,status, category, message):
         message = message.decode('utf-8')
     
     # Remove ANSI escape sequences
-    #clean_message = ansi_escape.sub('', message)
+    clean_message = ansi_escape.sub('', message)
     level_mapping = {
         'OK': logging.INFO,
         'Warning': logging.WARNING,
@@ -43,7 +43,7 @@ def custom_logger(instance_environment ,status, category, message):
     #print("status: ", status)
     log_level = level_mapping.get(status, logging.INFO)
     
-    logger.log(log_level, f"[{category}] {message}")
+    logger.log(log_level, f"[{category}] {clean_message}")
 
 
 
@@ -59,8 +59,9 @@ def process_triggers(evaluation_output):
     if isinstance(evaluation_output, bytes):
         evaluation_output = evaluation_output.decode('utf-8')
 
+    clean_evaluation_output = ansi_escape.sub('', evaluation_output)
     # Split the output into lines
-    lines = evaluation_output.splitlines()
+    lines = clean_evaluation_output.splitlines()
 
     # Define a pattern to match trigger lines
     trigger_pattern = re.compile(r'\[Trigger\]\s+\[#(\d+)\]\s+=\s+(.*)')
@@ -73,13 +74,11 @@ def process_triggers(evaluation_output):
             trigger_message = match.group(2).strip()
 
             # Example: Act on specific trigger messages
-            if trigger_message == "Ball in motion":
+            print("test trigger: ", trigger_message)    
+            if trigger_message == "Ball close to ground":
                 print(f"Trigger #{trigger_id}: {trigger_message}")
-                # Add your custom action here
-            elif trigger_message == "Ball is currently above ground":
-                print(f"Trigger #{trigger_id}: {trigger_message}")
-                # Add your custom action here
-            # Add more conditions as needed
+                return "Ball close to ground"
+    
 
 def setup_fmu3_slave(fmu_path, unzip_directory="unzip_dir"):
     """
@@ -103,8 +102,8 @@ def setup_fmu3_slave(fmu_path, unzip_directory="unzip_dir"):
 
     # Ensure binaries path exists
     current_time = 0.0
-    stop_time = 1.0
-    step_size = 1e-1
+    stop_time = 5.0
+    step_size = 1e-2
     log_level=2
     # Step 3: Instantiate the FMU3Slave
     fmu3_slave = FMU3Slave(
@@ -133,20 +132,16 @@ def setup_fmu3_slave(fmu_path, unzip_directory="unzip_dir"):
     spec_ref = None
     
     # Step 4: Set up the FMU3Slave and run the simulation
-    flip = False 
     while current_time < stop_time - step_size:
         fmu3_slave.doStep(currentCommunicationPoint=current_time, communicationStepSize=step_size)
-        #print(f"FMU State After doStep: {fmu3_slave.state}")  # Print FMU state after stepping
-        h_value = fmu3_slave.getFloat64([vrs['h']])[0]
-        #print("Current height:", h_value)
         
-        raw = fmu3_slave.getString([vrs["rtlola_output"]])[0]
+        evaluation_output = fmu3_slave.getString([vrs["rtlola_output"]])[0]
 
-        #print("Raw output:", raw)
-        if not flip:
-            #fmu3_slave.setFloat64([vrs['h']], [10])
+        
+
+        if process_triggers(evaluation_output) == "Ball close to ground":
             fmu3_slave.setString([vrs['rtlola_spec']], ["specifications/new_ball_spec.lola", "h", "v"])
-            flip = True
+            
         #print("Current height:", h_value)
         print()
        

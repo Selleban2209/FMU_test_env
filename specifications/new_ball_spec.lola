@@ -7,8 +7,9 @@ output is_falling := v < 0.0
 output is_rising := v > 0.0
 output heighVel := h- v 
 output height_above_ground := h > 0.0
+output falling_close_to_ground := h < 0.2 && v < 0.0
 
 trigger is_falling "Ball is falling"
 trigger is_rising "Ball is rising"
-trigger h < 0.2 "Ball is close to ground"
+trigger falling_close_to_ground "Ball is falling close to the ground"
 trigger h <= 0.0 "Ball has hit the ground"
