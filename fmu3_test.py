@@ -154,7 +154,7 @@ if __name__ == "__main__":
     # Set up logging
    
     
-    fmu_file_path = "BouncingBall.fmu"
+    fmu_file_path = "fmus_RTLola_FFI/BouncingBall.fmu"
     
     if not os.path.exists(fmu_file_path):
         print(f"Error: FMU file '{fmu_file_path}' not found.")
