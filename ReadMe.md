@@ -1,10 +1,8 @@
 
 
----
-
 # RTLola-FMU Evaluation Scripts
 
-This repository provides a collection of Python scripts for testing and analyzing Functional Mock-up Units (FMUs) instrumented with RTLola runtime monitoring specifications. The tools support benchmarking, visual analysis, and specification switching during simulation.
+This repository provides a collection of Python scripts for testing and analyzing Functional Mock-up Units (FMUs) with RTLola runtime integration. Monitoring FMUs properties up to a user defined specifications. The tools support benchmarking, visual analysis, and specification switching during simulation.
 
 ## Contents
 
