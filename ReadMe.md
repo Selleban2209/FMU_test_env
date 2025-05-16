@@ -44,7 +44,7 @@ Runs an FMU simulation and generates a plot of variable outputs over time, highl
 * Interactive visualization using Plotly
 * Trigger points marked with visual indicators
 * Example use of dynamic input response based on trigger conditions
-* Logging of FMU internal messages and trigger evaluations
+
 
 #### Usage
 
